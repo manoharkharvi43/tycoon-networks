@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tycoon Networks | Grow on Google</title>
+<meta name="description" content="Tycoon Networks — Google Business Profile listing, verification, virtual tours, reviews and local SEO in Bangalore.">
+<link rel="icon" href="../logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #663399;
+    --glow: #9b5de5;
+    --bg: #0e0a16;
+    --panel: #171024;
+    --line: #2a1f3d;
+    --text: #f2edf9;
+    --muted: #a89bbd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  header { position: fixed; inset: 16px 16px auto; z-index: 10; }
+  nav { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 10px 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(23,16,36,.75); backdrop-filter: blur(12px); }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 1px; }
+  .brand img { width: 36px; height: 36px; border-radius: 50%; }
+  .btn { display: inline-block; background: var(--brand); color: #fff; padding: 11px 22px; border-radius: 999px; font-weight: 600; box-shadow: 0 0 0 0 rgba(155,93,229,.6); transition: .25s; }
+  .btn:hover { box-shadow: 0 0 30px 4px rgba(155,93,229,.45); }
+  .btn.line { background: transparent; border: 1px solid var(--line); }
+  .btn.line:hover { border-color: var(--glow); }
+
+  .hero { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 120px 0 80px; position: relative; overflow: hidden; isolation: isolate; }
+  .hero::before { content: ""; position: absolute; width: 700px; height: 700px; max-width: 120vw; border-radius: 50%; background: radial-gradient(circle, rgba(102,51,153,.55), transparent 65%); top: 50%; left: 50%; transform: translate(-50%, -55%); z-index: -1; }
+  .hero img { width: 170px; border-radius: 50%; margin-bottom: 28px; box-shadow: 0 0 60px rgba(155,93,229,.5); }
+  h1 { font-size: clamp(36px, 7vw, 76px); line-height: 1.05; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 20px; }
+  h1 span { background: linear-gradient(90deg, #c9a6ff, var(--glow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { color: var(--muted); font-size: 18px; max-width: 560px; margin: 0 auto 32px; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  section { padding: 90px 0; }
+  .label { color: var(--glow); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+  h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin-bottom: 40px; max-width: 640px; }
+
+  .list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .list div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 24px; display: flex; gap: 16px; align-items: baseline; transition: .25s; }
+  .list div:hover { background: var(--panel); }
+  .list b { color: var(--glow); font-size: 13px; font-weight: 500; }
+  .list span { font-size: 18px; font-weight: 500; }
+
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pillar { background: linear-gradient(160deg, var(--panel), var(--bg)); border: 1px solid var(--line); border-radius: 24px; padding: 36px 30px; position: relative; overflow: hidden; }
+  .pillar::after { content: ""; position: absolute; width: 160px; height: 160px; border-radius: 50%; background: var(--brand); filter: blur(70px); opacity: .5; top: -60px; right: -60px; }
+  .pillar h3 { font-size: 26px; margin-bottom: 10px; }
+  .pillar p { color: var(--muted); }
+  .bar { height: 4px; border-radius: 4px; background: var(--line); margin-top: 24px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), var(--glow)); }
+
+  .contact { border: 1px solid var(--line); border-radius: 28px; padding: 56px 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(102,51,153,.45), var(--panel) 70%); }
+  .contact h2 { margin: 0 auto 14px; }
+  .contact p { color: var(--muted); margin-bottom: 30px; }
+  .contact .cta a { min-width: 220px; }
+  .contact .mail { display: block; margin-top: 22px; color: var(--muted); word-break: break-all; }
+  .contact .mail:hover { color: var(--text); }
+
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 30px 20px 40px; }
+
+  @media (max-width: 860px) {
+    .list, .pillars { grid-template-columns: 1fr; }
+    .contact { padding: 40px 20px; }
+    .nav-call { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="brand"><img src="../logo.jpg" alt="Tycoon Networks logo">TYCOON NETWORKS</a>
+    <a href="tel:+918618712011" class="btn">Call</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <img src="../logo.jpg" alt="Tycoon Networks">
+    <h1>Get found on <span>Google.</span><br>Get chosen first.</h1>
+    <p>Google Business Profile setup, verification and growth for local businesses in Bangalore.</p>
+    <div class="cta">
+      <a href="#contact" class="btn">Start Growing</a>
+      <a href="#services" class="btn line">See Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="label">Services</div>
+    <h2>Everything your Google profile needs, handled.</h2>
+    <div class="list" id="svc"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">Our Approach</div>
+    <h2>Three things decide your local ranking. We work on all three.</h2>
+    <div class="pillars">
+      <div class="pillar"><h3>Relevance</h3><p>Categories, keywords and details that match what customers search for.</p><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="pillar"><h3>Visibility</h3><p>Verified listing, HD photos, 360° tour and fresh posts that keep you seen.</p><div class="bar"><i style="width:85%"></i></div></div>
+      <div class="pillar"><h3>Prominence</h3><p>Reviews and ratings that build trust and lift you above competitors.</p><div class="bar"><i style="width:100%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="label">Contact</div>
+      <h2>Ready to unlock your business potential?</h2>
+      <p>Call or WhatsApp us and we'll get your profile working for you.</p>
+      <div class="cta">
+        <a href="tel:+918618712011" class="btn">+91 86187 12011</a>
+        <a href="https://wa.me/918618712011" target="_blank" rel="noopener" class="btn line">WhatsApp Us</a>
+      </div>
+      <a class="mail" href="mailto:tycoonnetworksblr@gmail.com">tycoonnetworksblr@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Tycoon Networks · Bangalore</footer>
+
+<script>
+  const services = ['GBP Listing', 'GBP Verification', 'Contact Number', '360° Virtual Tour', 'HD Pictures', 'HD Drive Link', 'Location QR Code', 'Review QR Code', 'Keyword Optimization', 'Updates & Posters', 'Reviews & Ratings Management', 'Monthly Performance Reports'];
+  document.getElementById('svc').innerHTML = services
+    .map((s, n) => `<div><b>${String(n + 1).padStart(2, '0')}</b><span>${s}</span></div>`).join('');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
