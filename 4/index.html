@@ -42,34 +42,14 @@
   .btn.ghost:hover { border-color: var(--brand); color: var(--brand); }
 
   /* Hero */
-  .hero { background: radial-gradient(1000px 500px at 85% 0%, var(--brand-tint), transparent 70%); padding: 80px 0 90px; }
-  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
-  .pill { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--brand); background: var(--brand-tint); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
-  .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
-  h1 { font-size: clamp(34px, 5vw, 58px); line-height: 1.1; font-weight: 800; letter-spacing: -1px; color: var(--navy); margin-bottom: 20px; }
-  h1 span { color: var(--brand); }
-  .lead { font-size: 18px; color: var(--muted); max-width: 540px; margin-bottom: 30px; }
-  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-  .trust { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 34px; font-size: 14px; color: var(--muted); }
-  .trust span { display: flex; align-items: center; gap: 8px; }
-  .trust svg { width: 18px; height: 18px; color: var(--brand); }
-
-  /* Mock profile card */
-  .mock { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 30px 70px rgba(20,17,43,.12); overflow: hidden; max-width: 440px; justify-self: center; width: 100%; }
-  .mock .map { height: 130px; background: linear-gradient(135deg, #e9e4f2 25%, #f3f0f8 25%, #f3f0f8 50%, #e9e4f2 50%, #e9e4f2 75%, #f3f0f8 75%) 0 0/40px 40px; position: relative; }
-  .mock .map svg { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -70%); width: 42px; height: 42px; color: var(--brand); fill: var(--brand); stroke: #fff; }
-  .mock .body { padding: 22px; }
-  .mock h4 { font-size: 19px; font-weight: 700; color: var(--navy); }
-  .mock .meta { color: var(--muted); font-size: 13px; margin: 2px 0 14px; }
-  .stars { color: #f5a623; letter-spacing: 2px; font-size: 15px; }
-  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
-  .chips div { text-align: center; font-size: 11px; font-weight: 600; color: var(--brand); border: 1px solid var(--line); border-radius: 10px; padding: 10px 4px; }
-  .chips svg { display: block; margin: 0 auto 4px; width: 18px; height: 18px; }
-  .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-  .photos div { aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #cdb6e6, var(--brand)); opacity: .85; }
-  .photos div:nth-child(2) { background: linear-gradient(135deg, #b9a1d6, #4a2470); }
-  .photos div:nth-child(3) { background: linear-gradient(135deg, #e0d2f0, #8a5cbf); }
-  .mock-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+  .hero { background: linear-gradient(135deg, var(--brand-tint) 0%, #fff 60%); padding: 80px 0; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .tag { display: inline-block; background: #fff; color: var(--brand); border: 1px solid #ddd0ec; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; margin-bottom: 18px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; font-weight: 800; color: var(--navy); margin-bottom: 18px; }
+  h1 em { font-style: normal; color: var(--brand); }
+  .hero p { color: var(--muted); font-size: 17px; max-width: 520px; margin-bottom: 30px; }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-logo { width: 100%; max-width: 420px; justify-self: center; border-radius: 50%; box-shadow: 0 30px 60px rgba(102,51,153,.25); }
 
   /* Sections */
   section { padding: 90px 0; }
@@ -149,7 +129,11 @@
   }
   @media (max-width: 760px) {
     .links, .nav-cta { display: none; }
-    .hero { padding: 48px 0 60px; }
+    .hero { padding: 48px 0; }
+    .hero .wrap { text-align: center; }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .cta { justify-content: center; }
+    .hero-logo { max-width: 260px; order: -1; }
     .hero .wrap, .pillars, .contact, .why, .groups, .process, .row { grid-template-columns: 1fr; }
     .contact { padding: 32px 20px; }
     section { padding: 64px 0; }
@@ -174,37 +158,15 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="pill"><i></i>Local Marketing Agency · Bangalore</div>
-      <h1>Turn Google searches into <span>walk-ins and calls.</span></h1>
-      <p class="lead">Tycoon Networks builds, verifies and manages your Google Business Profile end to end, so your business shows up when nearby customers are ready to buy.</p>
+      <span class="tag">Google Business Profile Experts · Bangalore</span>
+      <h1>The way to <em>unlock</em> your business potential</h1>
+      <p>We set up, verify and grow your Google Business Profile so more local customers find you, trust you and call you.</p>
       <div class="cta">
-        <a href="#contact" class="btn">Book a Free Consultation</a>
-        <a href="tel:+918618712011" class="btn ghost"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>86187 12011</a>
-      </div>
-      <div class="trust">
-        <span><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></svg>End-to-end setup</span>
-        <span><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></svg>Monthly reports</span>
-        <span><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></svg>Dedicated support</span>
+        <a href="#contact" class="btn">Get Started</a>
+        <a href="#services" class="btn ghost">Our Services</a>
       </div>
     </div>
-    <div>
-      <div class="mock" aria-hidden="true">
-        <div class="map"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3" fill="#fff"/></svg></div>
-        <div class="body">
-          <h4>Your Business Name</h4>
-          <div class="meta">Open now · Bangalore</div>
-          <div class="stars">★★★★★</div>
-          <div class="chips">
-            <div><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</div>
-            <div><svg viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8z"/></svg>Directions</div>
-            <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4"/></svg>360° Tour</div>
-            <div><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Review</div>
-          </div>
-          <div class="photos"><div></div><div></div><div></div></div>
-        </div>
-      </div>
-      <div class="mock-note">What a complete Google profile looks like</div>
-    </div>
+    <img class="hero-logo" src="../logo.jpg" alt="Tycoon Networks">
   </div>
 </section>
 
