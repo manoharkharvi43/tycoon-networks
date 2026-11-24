@@ -32,8 +32,8 @@
   nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 20px; }
   .brand { display: flex; align-items: center; gap: 12px; }
   .brand img { width: 46px; height: 46px; border-radius: 50%; }
-  .brand b { font-size: 17px; font-weight: 800; letter-spacing: .5px; color: var(--navy); line-height: 1.1; }
-  .brand b small { display: block; font-size: 10px; letter-spacing: 3px; color: var(--brand); font-weight: 700; }
+  .brand b { font-size: 17px; font-weight: 800; letter-spacing: .5px; color: var(--brand); line-height: 1.1; }
+  .brand b small { display: block; font-size: 10px; letter-spacing: 3px; color: #9a6fd0; font-weight: 700; }
   .links { display: flex; gap: 28px; font-size: 15px; font-weight: 500; color: var(--muted); }
   .links a:hover { color: var(--brand); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--brand); color: #fff; padding: 13px 24px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; transition: .2s; }
@@ -53,6 +53,7 @@
   .stamp::before { content: ""; position: absolute; inset: -18px; border: 1.5px dashed var(--brand); border-radius: 50%; opacity: .4; }
   .hero-logo { width: 100%; display: block; border-radius: 50%; box-shadow: 0 30px 60px rgba(102,51,153,.25); animation: spin 60s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
+  .hero-core { position: absolute; inset: 0; width: 100%; border-radius: 50%; clip-path: circle(37.5%); }
   @media (prefers-reduced-motion: reduce) { .hero-logo { animation: none; } }
 
   /* Sections */
@@ -61,6 +62,7 @@
   .head { max-width: 680px; margin-bottom: 48px; }
   .head.center { text-align: center; margin-left: auto; margin-right: auto; }
   .eyebrow { font-size: 13px; font-weight: 700; color: var(--brand); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .eyebrow.big { font-size: 17px; }
   h2 { font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: var(--navy); letter-spacing: -.5px; margin-bottom: 12px; }
   .head p { color: var(--muted); font-size: 17px; }
 
@@ -184,7 +186,7 @@
         <a href="#services" class="btn ghost">Our Services</a>
       </div>
     </div>
-    <div class="stamp"><img class="hero-logo" src="../logo.jpg" alt="Tycoon Networks"></div>
+    <div class="stamp"><img class="hero-logo" src="../logo.jpg" alt="Tycoon Networks"><img class="hero-core" src="../logo.jpg" alt="" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -245,7 +247,7 @@
 <section id="process">
   <div class="wrap">
     <div class="head center">
-      <div class="eyebrow">How we work</div>
+      <div class="eyebrow big">How it works?</div>
       <h2>A simple four-step process</h2>
       <p>Clear steps from the first call to ongoing growth.</p>
     </div>
@@ -276,7 +278,7 @@
 <section>
   <div class="wrap">
     <div class="head center">
-      <div class="eyebrow">Why Tycoon Networks</div>
+      <div class="eyebrow big">Why Tycoon Networks?</div>
       <h2>What clients get from working with us</h2>
     </div>
     <div class="why">
